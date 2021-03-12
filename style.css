@@ -215,3 +215,20 @@ button {
   outline: none;
   border-radius: 4px;
 }
+
+.blink {
+  animation: blink 1s ease infinite;
+}
+
+.draw {
+  background-color: rgb(12, 88, 133) !important;
+}
+
+@keyframes blink {
+  from {
+    background-color: rgb(96, 179, 96);
+  }
+   to {
+     background-color: rgb(244, 244, 248);
+   }
+}

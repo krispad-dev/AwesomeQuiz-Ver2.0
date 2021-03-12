@@ -2,14 +2,14 @@ import { questions } from './data.js';
 
 const options = Array.from(document.querySelectorAll('.question-container div'));
 const questionHeader = document.querySelector('.question-container span');
+const questionContainer = document.querySelector('.question-container .header');
 const playerOneContainer = document.querySelector('.player-1');
 const playerTwoContainer = document.querySelector('.player-2');
 const playerOneScoreTxt = document.querySelector('#score-1');
 const playerTwoScoreTxt = document.querySelector('#score-2');
 const startBtn = document.querySelector('#startBtn');
 let indexCount = 0;
-var current = questions[indexCount];
-
+let current = questions[indexCount];
 
 let currentAnswer = current.answer;
 let activePlayer = 1;
@@ -20,16 +20,8 @@ let playerTwoScore = 0;
 let aCount = 1;
 
 
-
-
-//console.log(options);
-console.log(current);
-
-// Välkomst-text i h4
 questionHeader.innerText = 'Välkommen till denna awesome quiz!';
 
-
-// Presentera start-knapp
 startBtn.onclick = () => startQuiz();
 
 
@@ -56,25 +48,22 @@ const playerSelector = () => {
     }
 }
 
-
 const startQuiz = () => {
-
-
-    if (indexCount == questions.length + 1) {
-        if (playerOneScore === playerTwoScore) {
+    startBtn.style.display = 'none';
+    if(indexCount == questions.length+1) {
+        if(playerOneScore === playerTwoScore) {
             questionHeader.innerText = 'Oavgjort!';
+            questionContainer.classList.add('draw');
             return;
         } else {
-            questionHeader.innerText = `Vinnaren är ${playerOneScore > playerTwoScore ? 'Spelare 1' : 'Spelare 2'}!`;
+            questionContainer.classList.add('blink');
+            questionHeader.innerText = `Vinnaren är ${playerOneScore > playerTwoScore ? 'Spelare 1 🏆' : 'Spelare 2 🏆'}`;
             return;
-        }
+        }  
     }
-
 
     const a = document.querySelector(`#a${aCount}`);
     const b = document.querySelector(`#b${aCount}`);
-
-
 
     options.forEach(item => {
         item.classList.remove('correct');
@@ -94,15 +83,11 @@ const startQuiz = () => {
     options.forEach(item => {
 
         item.onclick = () => {
-
-
             if (item.className.substr(0, 4) === currentAnswer) {
                 activePlayer === 1 ? playerOneScore++ : playerTwoScore++;
                 activePlayer === 1 ? a.style.backgroundColor += '#2ecc71' : b.style.backgroundColor += '#2ecc71';
                 item.classList.add('correct');
                 playerSelector();
-
-
             } else {
                 document.querySelector(`.${currentAnswer} `).classList.add('correct');
                 item.classList.add('wrong');
@@ -110,12 +95,9 @@ const startQuiz = () => {
                 playerSelector();
             }
 
-            playerOneScoreTxt.innerHTML = `: ${playerOneScore}`
-            playerTwoScoreTxt.innerHTML = `: ${playerTwoScore}`
-
+            playerOneScoreTxt.innerHTML = `: ${playerOneScore}`;
+            playerTwoScoreTxt.innerHTML = `: ${playerTwoScore}`;
         }
-
-
     });
 }
 
