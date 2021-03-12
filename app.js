@@ -1,5 +1,6 @@
-import { questions } from './data.js';
+import { questions } from './data.js'; //Importerar objekt med frågor
 
+//initialize variables 
 const options = Array.from(document.querySelectorAll('.question-container div'));
 const questionHeader = document.querySelector('.question-container span');
 const questionContainer = document.querySelector('.question-container .header');
@@ -20,12 +21,12 @@ let playerTwoScore = 0;
 let aCount = 1;
 
 
-questionHeader.innerText = 'Välkommen till denna awesome quiz!';
+questionHeader.innerText = 'Välkommen till denna awesome quiz!'; //Välkomnar spelaren
 
-startBtn.onclick = () => startQuiz();
+startBtn.onclick = () => startQuiz(); //startar spelet
 
 
-const playerSelector = () => {
+const playerSelector = () => { // Väljer spelare och öka progressbar med ett steg.
     if (playerOneContainer.classList.contains('hidden-class')) {
         activePlayer = 1;
 
@@ -48,10 +49,10 @@ const playerSelector = () => {
     }
 }
 
-const startQuiz = () => {
-    startBtn.style.display = 'none';
-    if(indexCount == questions.length+1) {
-        if(playerOneScore === playerTwoScore) {
+const startQuiz = () => { // Kollar om spelare har vunnit eller blivit oavgjort
+    startBtn.style.display = 'none'; // Plockar bort startknapp
+    if (indexCount == questions.length + 1) {
+        if (playerOneScore === playerTwoScore) {
             questionHeader.innerText = 'Oavgjort!';
             questionContainer.classList.add('draw');
             return;
@@ -59,28 +60,29 @@ const startQuiz = () => {
             questionContainer.classList.add('blink');
             questionHeader.innerText = `Vinnaren är ${playerOneScore > playerTwoScore ? 'Spelare 1 🏆' : 'Spelare 2 🏆'}`;
             return;
-        }  
+        }
     }
 
+    // Räknar progress bar
     const a = document.querySelector(`#a${aCount}`);
     const b = document.querySelector(`#b${aCount}`);
 
-    options.forEach(item => {
+    options.forEach(item => {  // Tar bort svarsalternativen
         item.classList.remove('correct');
         item.classList.remove('wrong');
     });
-
+    //Kollar gällande index i array och presenterar ny fråga
     current = questions[`${indexCount++}`];
     currentAnswer = current.answer;
     questionHeader.innerText = current.question;
 
-    Object.entries(current).forEach(([key, value]) => {
-        if (key.includes('opt')) {
+    Object.entries(current).forEach(([key, value]) => { // Kollar entry index på array (gällande objekt)
+        if (key.includes('opt')) { //Kollar om innehåller option
             document.querySelector(`.${key}`).innerText = value;
         }
     });
 
-    options.forEach(item => {
+    options.forEach(item => { // Kollar huruvida aktiv spelare svarar rätt på frågan.
 
         item.onclick = () => {
             if (item.className.substr(0, 4) === currentAnswer) {

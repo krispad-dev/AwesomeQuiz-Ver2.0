@@ -1,7 +1,7 @@
 
 export const questions = [
     {
-        id: 1, 
+        id: 1,
         question: 'Vad heter Slovakiens huvudstad?',
         category: 'geografi',
         optA: 'Sofia',
@@ -11,7 +11,7 @@ export const questions = [
         answer: 'optC'
     },
     {
-        id: 2, 
+        id: 2,
         question: 'Vad betyder Hola på spanska?',
         category: 'språk',
         optA: 'Hej',
@@ -21,7 +21,7 @@ export const questions = [
         answer: 'optA'
     },
     {
-        id: 3, 
+        id: 3,
         question: 'Vilken ö är Sveriges femte största?',
         category: 'geografi',
         optA: 'Orust',
@@ -31,7 +31,7 @@ export const questions = [
         answer: 'optD'
     },
     {
-        id: 4, 
+        id: 4,
         question: 'Vilken färg är svart?',
         category: 'geografi',
         optA: 'Det är vit',
@@ -41,7 +41,7 @@ export const questions = [
         answer: 'optD'
     },
     {
-        id: 5, 
+        id: 5,
         question: 'Vad heter Slovakiens huvudstad?',
         category: 'geografi',
         optA: 'Sofia',
@@ -51,7 +51,7 @@ export const questions = [
         answer: 'optC'
     },
     {
-        id: 6, 
+        id: 6,
         question: 'Vad betyder Hola på spanska?',
         category: 'språk',
         optA: 'Hej',
@@ -61,7 +61,7 @@ export const questions = [
         answer: 'optA'
     },
     {
-        id: 7, 
+        id: 7,
         question: 'Vilken ö är Sveriges femte största?',
         category: 'geografi',
         optA: 'Orust',
@@ -71,7 +71,7 @@ export const questions = [
         answer: 'optD'
     },
     {
-        id: 8, 
+        id: 8,
         question: 'Vilken färg är svart?',
         category: 'geografi',
         optA: 'Det är vit',
@@ -81,7 +81,7 @@ export const questions = [
         answer: 'optD'
     },
     {
-        id: 9, 
+        id: 9,
         question: 'Vad heter Slovakiens huvudstad?',
         category: 'geografi',
         optA: 'Sofia',
@@ -91,7 +91,7 @@ export const questions = [
         answer: 'optC'
     },
     {
-        id: 10, 
+        id: 10,
         question: 'Vad betyder Hola på spanska?',
         category: 'språk',
         optA: 'Hej',
@@ -101,7 +101,7 @@ export const questions = [
         answer: 'optA'
     },
     {
-        id: 11, 
+        id: 11,
         question: 'Vilken ö är Sveriges femte största?',
         category: 'geografi',
         optA: 'Orust',
@@ -111,7 +111,7 @@ export const questions = [
         answer: 'optD'
     },
     {
-        id: 12, 
+        id: 12,
         question: 'Vilken färg är svart?',
         category: 'geografi',
         optA: 'Det är vit',
@@ -121,7 +121,7 @@ export const questions = [
         answer: 'optD'
     },
     {
-        id: 13, 
+        id: 13,
         question: 'Vad heter Slovakiens huvudstad?',
         category: 'geografi',
         optA: 'Sofia',
@@ -131,7 +131,7 @@ export const questions = [
         answer: 'optC'
     },
     {
-        id: 14, 
+        id: 14,
         question: 'Vad betyder Hola på spanska?',
         category: 'språk',
         optA: 'Hej',
@@ -141,7 +141,7 @@ export const questions = [
         answer: 'optA'
     },
     {
-        id: 16, 
+        id: 16,
         question: 'Vilken ö är Sveriges femte största?',
         category: 'geografi',
         optA: 'Orust',
@@ -151,7 +151,7 @@ export const questions = [
         answer: 'optD'
     },
     {
-        id: 17, 
+        id: 17,
         question: 'Vilken färg är svart?',
         category: 'geografi',
         optA: 'Det är vit',
@@ -161,7 +161,7 @@ export const questions = [
         answer: 'optD'
     },
     {
-        id: 18, 
+        id: 18,
         question: 'Vilken färg är svart?',
         category: 'geografi',
         optA: 'Det är vit',
@@ -171,7 +171,7 @@ export const questions = [
         answer: 'optD'
     },
     {
-        id: 19, 
+        id: 19,
         question: 'Vilken färg är svart?',
         category: 'geografi',
         optA: 'Det är vit',
@@ -181,7 +181,7 @@ export const questions = [
         answer: 'optD'
     },
     {
-        id: 20, 
+        id: 20,
         question: 'Vilken färg är svart?',
         category: 'geografi',
         optA: 'Det är vit',
