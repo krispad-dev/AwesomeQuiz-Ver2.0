@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto:wght@100&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1d1c1c;
+  display: flex;
+  flex-direction: column;
+  background-image: url(image.svg);
+  background-position: center;
+  height: 100vh;
+}
+
+section.player-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+#player1-text {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 102px;
+  margin: 0;
+  color: #f8f8f8;
+  letter-spacing: 17px;
+}
+
+#player2-text {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 102px;
+  margin: 0;
+  color: #f8f8f8;
+  letter-spacing: 14px;
+}
+
+div.container-player {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 121px);
+  grid-template-rows: auto 16px 16px;
+  gap: 0px;
+  grid-template-areas:
+    "bar-0 bar-0 bar-0 bar-0 bar-0"
+    "bar-1 bar-2 bar-3 bar-4 bar-5"
+    "bar-6 bar-7 bar-8 bar-9 bar-10";
+}
+
+div.progress.bar-0 {
+  grid-area: bar-0;
+  background-color: #fff;
+  transition: 1s;
+}
+
+div.progress.bar-1 {
+  grid-area: bar-1;
+}
+div.progress.bar-2 {
+  grid-area: bar-2;
+}
+div.progress.bar-3 {
+  grid-area: bar-3;
+}
+div.progress.bar-4 {
+  grid-area: bar-4;
+}
+div.progress.bar-5 {
+  grid-area: bar-5;
+}
+div.progress.bar-6 {
+  grid-area: bar-6;
+}
+div.progress.bar-7 {
+  grid-area: bar-7;
+}
+div.progress.bar-8 {
+  grid-area: bar-8;
+}
+div.progress.bar-9 {
+  grid-area: bar-9;
+}
+div.progress.bar-10 {
+  grid-area: bar-10;
+}
+
+.question-container {
+  width: 1257px;
+  margin: auto;
+  display: grid;
+  gap: 5px;
+  transition: 1s;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header header"
+    "optA optB"
+    "optC optD"
+    "optE optF";
+}
+
+.question-container .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d3d3d;
+  opacity: 0.8;
+  grid-area: header;
+  font-size: 3rem;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  padding: 3rem;
+}
+
+.question-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  color: #f5f6fa;
+  padding: 15px;
+  opacity: 0.8;
+}
+
+.optA {
+  grid-area: optA;
+  background-color: #3d3d3d;
+}
+
+.optB {
+  grid-area: optB;
+  background-color: #3d3d3d;
+}
+
+.optC {
+  grid-area: optC;
+  background-color: #3d3d3d;
+}
+
+.optD {
+  grid-area: optD;
+  background-color: #3d3d3d;
+}
+
+.optE {
+  grid-area: optE;
+  background-color: #fff;
+}
+
+.optF {
+  grid-area: optF;
+  background-color: #fff;
+}
+
+footer {
+  background-image: url(image.svg);
+  background-position: center;
+  background-size: contain;
+  height: 200px;
+  width: 100%;
+  animation: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+section.score-container {
+  margin-top: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+span#score-1,
+span#score-2 {
+  font-size: 50px;
+  color: #fff;
+}
+
+div.score {
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #fff;
+  letter-spacing: 5px;
+}
+
+.hidden-class {
+  opacity: 0.3;
+  transition: 0.5s;
+}
+
+.opt:hover {
+  background-color: #3498db;
+  transition-duration: 0.2s;
+}
+
+.opt.correct {
+  background-color: #2ecc71;
+}
+
+.opt.wrong {
+  background-color: #e74c3c;
+}
+
+button {
+  width: 200px;
+  height: 20px;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  outline: none;
+  border-radius: 4px;
+}

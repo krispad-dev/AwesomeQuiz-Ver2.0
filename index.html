@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="app.js" defer></script>
+    <title>Awesome Quiz</title>
+</head>
+
+<body>
+    <section class="player-section">
+
+        <div class="player-1 container-player">
+            <h1 class="progress bar-0" id="player1-text">PLAYER&nbsp;ONE</h1>
+            <div class="progress bar-1" id="a1"></div>
+            <div class="progress bar-2" id="a2"></div>
+            <div class="progress bar-3" id="a3"></div>
+            <div class="progress bar-4" id="a4"></div>
+            <div class="progress bar-5" id="a5"></div>
+            <div class="progress bar-6" id="a6"></div>
+            <div class="progress bar-7" id="a7"></div>
+            <div class="progress bar-8" id="a8"></div>
+            <div class="progress bar-9" id="a9"></div>
+            <div class="progress bar-10" id="a10"></div>
+        </div>
+
+        <div class="player-2 container-player hidden-class">
+            <h1 class="progress bar-0" id="player2-text">PLAYER&nbsp;TWO</h1>
+            <div class="progress bar-1" id="b1"></div>
+            <div class="progress bar-2" id="b2"></div>
+            <div class="progress bar-3" id="b3"></div>
+            <div class="progress bar-4" id="b4"></div>
+            <div class="progress bar-5" id="b5"></div>
+            <div class="progress bar-6" id="b6"></div>
+            <div class="progress bar-7" id="b7"></div>
+            <div class="progress bar-8" id="b8"></div>
+            <div class="progress bar-9" id="b9"></div>
+            <div class="progress bar-10" id="b10"></div>
+        </div>
+    </section>
+
+    <section class="question-container">
+        <nav class="header">
+            <span class="header">Vem heter vad egentligen?</span>
+            <button id="startBtn">START</button>
+        </nav>
+        <div class="optA opt"><span></span></div>
+        <div class="optB opt"><span></span></div>
+        <div class="optC opt"><span></span></div>
+        <div class="optD opt"><span></span></div>
+        <div class="score player-one">SCORE<span id="score-1"></span></div>
+        <div class="score player-one">SCORE<span id="score-2"></span></div>
+    </section>
+
+</body>
+
+</html>
