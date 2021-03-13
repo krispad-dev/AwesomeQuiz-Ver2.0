@@ -23,12 +23,12 @@ let playerTwoScore = 0;
 let aCount = 1;
 
 
-questionHeader.innerText = 'Välkommen till denna awesome quiz!'; //Välkomnar spelaren  
+questionHeader.innerText = 'Välkommen till denna awesome quiz!'; // Välkomnar spelaren  
 
-startBtn.onclick = () => startQuiz(); //startar spelet
+startBtn.onclick = () => startQuiz(); // Startar spelet
 
 
-const playerSelector = () => { // Väljer spelare och öka progressbar med ett steg.
+const playerSelector = () => { // Väljer spelare och ökar progressbar med ett steg
 
 
     if (playerOneContainer.classList.contains('hidden-class')) {
@@ -57,7 +57,7 @@ const playerSelector = () => { // Väljer spelare och öka progressbar med ett s
     }
 }
 
-const startQuiz = () => { // Kollar om spelare har vunnit eller blivit oavgjort
+const startQuiz = () => { // Kollar om spelare har vunnit eller om det har blivit oavgjort
     startBtn.style.display = 'none'; // Plockar bort startknapp
     if (indexCount == questions.length + 1) {
         if (playerOneScore === playerTwoScore) {
@@ -71,7 +71,7 @@ const startQuiz = () => { // Kollar om spelare har vunnit eller blivit oavgjort
         }
     }
 
-    // Räknar progress bar
+    // Räknar progress bar referensvärde
     const a = document.querySelector(`#a${aCount}`);
     const b = document.querySelector(`#b${aCount}`);
 
@@ -85,12 +85,12 @@ const startQuiz = () => { // Kollar om spelare har vunnit eller blivit oavgjort
     questionHeader.innerText = current.question;
 
     Object.entries(current).forEach(([key, value]) => { // Kollar entry index på array (gällande objekt)
-        if (key.includes('opt')) { //Kollar om innehåller option
+        if (key.includes('opt')) { // Kollar om innehåller "option"
             document.querySelector(`.${key}`).innerText = value;
         }
     });
 
-    options.forEach(item => { // Kollar huruvida aktiv spelare svarar rätt på frågan.
+    options.forEach(item => { // Kollar huruvida aktiv spelare svarar rätt på frågan
 
         item.onclick = () => {
             question.classList.add('no-pointer-events')
